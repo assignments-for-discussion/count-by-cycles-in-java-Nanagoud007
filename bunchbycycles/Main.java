@@ -9,6 +9,14 @@ public class Main {
 
   static CountsByUsage countBatteriesByUsage(int[] cycles) {
     CountsByUsage counts = new CountsByUsage();
+    for(int i=0;i<cycles.length;i++){
+      if(cycles[i]<150)
+        counts.lowCount++;
+      else if(cycles[i]<650)
+         counts.mediumCount++;
+      else
+         counts.highCount++;
+    }
     return counts;
   }
 
